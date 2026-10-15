@@ -1,41 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab 5 - Volunteer Form</title>
+  <title>Volunteer Form</title>
 </head>
 <body>
   <h1>Volunteer Form</h1>
 
-  <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+  <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php"
+        method="POST">
 
     <fieldset>
-      <legend>My Info</legend> 
+      <legend>My Info</legend>
 
-      <label for="first_name_field">first name:</label>
-      <input type="text" id="first_name_field" name="first_name_field"><br>
+      <label for="first_name">First name:</label>
+      <input type="text" id="first_name" name="first_name_field" required>
+      <br>
 
-      <label for="last_name_field">last name:</label>
-      <input type="text" id="last_name_field" name="last_name_field"><br>
+      <label for="last_name">Last name:</label>
+      <input type="text" id="last_name" name="last_name_field" required>
+      <br>
 
-      <label for="phone_field">phone:</label>
-      <input type="text" id="phone_field" name="phone_field"><br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone_field" required>
+      <br>
 
-      <label for="email_field">email:</label>
-      <input type="text" id="email_field" name="email_field"><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email_field" required>
+      <br>
 
-      Gender:<br>
-      <label for="gender_male">Male</label>
-      <input type="radio" id="gender_male" name="gender_field" value="male">
-      <label for="gender_female">Female</label>
-      <input type="radio" id="gender_female" name="gender_field" value="female"><br>
+      <p>Gender:</p>
+      <input type="radio" id="male" name="gender_field" value="male" required>
+      <label for="male">Male</label>
 
-      <label for="age_field">Age:</label><br>
-      <select id="age_field" name="age_field">
-        <option value="under 18">under 18</option>
-        <option value="over 18">over 18</option>
-      </select>
+      <input type="radio" id="female" name="gender_field" value="female">
+      <label for="female">Female</label>
+
+      <p>
+        <label for="age">Age:</label>
+        <select id="age" name="age_field">
+          <option value="under 18">Under 18</option>
+          <option value="over 18">Over 18</option>
+        </select>
+      </p>
     </fieldset>
 
     <fieldset>
@@ -43,34 +52,44 @@
 
       <h3>Days Available:</h3>
 
+      <input type="checkbox" id="sunday" name="available_field[]" value="sunday">
       <label for="sunday">Sunday</label>
-      <input type="checkbox" id="sunday" name="available_field[]" value="sunday"><br>
+      <br>
 
+      <input type="checkbox" id="monday" name="available_field[]" value="monday">
       <label for="monday">Monday</label>
-      <input type="checkbox" id="monday" name="available_field[]" value="monday"><br>
+      <br>
 
+      <input type="checkbox" id="tuesday" name="available_field[]" value="tuesday">
       <label for="tuesday">Tuesday</label>
-      <input type="checkbox" id="tuesday" name="available_field[]" value="tuesday"><br>
+      <br>
 
+      <input type="checkbox" id="wednesday" name="available_field[]" value="wednesday">
       <label for="wednesday">Wednesday</label>
-      <input type="checkbox" id="wednesday" name="available_field[]" value="wednesday"><br>
+      <br>
 
+      <input type="checkbox" id="thursday" name="available_field[]" value="thursday">
       <label for="thursday">Thursday</label>
-      <input type="checkbox" id="thursday" name="available_field[]" value="thursday"><br>
+      <br>
 
+      <input type="checkbox" id="friday" name="available_field[]" value="friday">
       <label for="friday">Friday</label>
-      <input type="checkbox" id="friday" name="available_field[]" value="friday"><br>
+      <br>
 
+      <input type="checkbox" id="saturday" name="available_field[]" value="saturday">
       <label for="saturday">Saturday</label>
-      <input type="checkbox" id="saturday" name="available_field[]" value="saturday"><br>
 
-      <h3><label for="comments_field">Comments</label></h3>
-      <textarea id="comments_field" name="comments_field" rows="3" cols="20"></textarea>
+      <h3>
+        <label for="comments">Comments</label>
+      </h3>
+
+      <textarea id="comments" name="comments_field" rows="4" cols="30"></textarea>
     </fieldset>
 
-    <input type="hidden" name="hidden_field" value="OmarSalman">
+    <input type="hidden" name="hidden_field" value="Omar Salman">
 
     <input type="submit" value="Submit Query">
+
   </form>
 </body>
 </html>
